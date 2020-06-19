@@ -1,0 +1,59 @@
+{
+  "name": "@overturebio-stack/lectern-client",
+  "version": "0.1.0",
+  "files": [
+    "lib/**/*"
+  ],
+  "main": "index.js",
+  "typings": "dist/index.d.ts",
+  "description": "js client for the overture lectern",
+  "scripts": {
+    "test": "npm run tslint && npm run compile && mocha --exit --timeout 5000 -r ts-node/register test/**.spec.ts",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "prebuild": "rimraf lib && rimraf docs",
+    "build": "npm run prebuild && npm run test && typedoc --out docs --target es6 --theme minimal --mode file src",
+    "build-notest": "npm run prebuild && npm run tslint && npm run compile && typedoc --out docs --target es6 --theme minimal --mode file src",
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overture-stack/js-lectern-client.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/deep-freeze": "^0.1.1",
+    "@types/lodash": "^4.14.155",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.10",
+    "@types/node-fetch": "^2.5.0",
+    "chai": "^4.2.0",
+    "husky": "^3.0.0",
+    "rimraf": "^2.6.2",
+    "mocha": "^6.1.4",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^1.11.1",
+    "tslint": "^5.20.1",
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "ts-node": "^8.5.4",
+    "node-fetch": "^2.6.0",
+    "lodash": "^4.17.14",
+    "node-worker-threads-pool": "^1.2.2",
+    "promise-tools": "^2.1.0",
+    "winston": "^3.2.1",
+    "deep-freeze": "^0.0.1"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "all",
+    "singleQuote": true
+  },
+  "author": "bashar allabadi <bashar.allabadi@oicr.on.ca>"
+}
