@@ -1,4 +1,4 @@
-def githubRepo = "overture-stack/lectern-client"
+def githubRepo = "overture-stack/js-lectern-client"
 def commit = "UNKNOWN"
 def version = "UNKNOWN"
 
