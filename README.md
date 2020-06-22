@@ -14,5 +14,9 @@
 
 
 ## to release new version
+
 - bump the version number
-- run ` npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish` 
+
+- publish to npm and tag git:
+Jenkinsfile will do that when a commit is added to master.
+if you need to do that manually then run `npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish` 
