@@ -10,7 +10,7 @@
 
 
 ## Usage examples:
-- icgc-argo/argo-clinical
+- icgc-argo/argo-clinical [https://github.com/icgc-argo/argo-clinical]
 
 
 ## to release new version
