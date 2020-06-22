@@ -48,7 +48,7 @@ spec:
                         usernamePassword(credentialsId: 'OvertureBioGithub', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME'),
                         string(credentialsId: "OvertureNPMToken", variable: 'NPM_TOKEN')
                     ]) {
-                        sh "npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish "
+                        sh "npm config set '//registry.npmjs.org/:_authToken' \"${NPM_TOKEN}\" && npm publish "
                         sh "git tag ${version}"
                         sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${githubRepo} --tags"
                     }
