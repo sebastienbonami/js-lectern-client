@@ -1,11 +1,11 @@
 {
   "name": "@overturebio-stack/lectern-client",
-  "version": "0.1.0",
+  "version": "0.1.8",
   "files": [
     "lib/**/*"
   ],
-  "main": "index.js",
-  "typings": "dist/index.d.ts",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "description": "js client for the overture lectern",
   "scripts": {
     "test": "npm run tslint && npm run compile && mocha --exit --timeout 5000 -r ts-node/register test/**.spec.ts",

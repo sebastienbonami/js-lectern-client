@@ -17,7 +17,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import { schemaClient } from './schema-rest-client';
+import { restClient } from './schema-rest-client';
 import {
   SchemasDictionaryDiffs,
   FieldChanges,
@@ -46,7 +46,7 @@ export const fetchDiffAndAnalyze = async (
   fromVersion: string,
   toVersion: string,
 ) => {
-  const changes = await schemaClient.fetchDiff(serviceUrl, name, fromVersion, toVersion);
+  const changes = await restClient.fetchDiff(serviceUrl, name, fromVersion, toVersion);
   return analyzeChanges(changes);
 };
 

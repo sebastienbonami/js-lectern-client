@@ -3032,14 +3032,40 @@ img {
 			<a href="globals.html#logconfiguration" class="tsd-kind-icon">log<wbr>Configuration</a>
 		</li>
 		<li class=" tsd-kind-object-literal">
-			<a href="globals.html#schemaclient" class="tsd-kind-icon">schema<wbr>Client</a>
+			<a href="globals.html#restclient" class="tsd-kind-icon">rest<wbr>Client</a>
 		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
-			<p>hello</p>
+			<a href="#js-lectern-client" id="js-lectern-client" style="color: inherit; text-decoration: none;">
+				<h1>JS Lectern Client</h1>
+			</a>
+			<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+				<h2>Features:</h2>
+			</a>
+			<ul>
+				<li>Runs different restrictions validations: regex, range, scripts, required fields, type checks, etc.</li>
+				<li>Transforms the data from string to their proper type.</li>
+				<li>Report validation errors.</li>
+				<li>Fetch dictionaries from the configured lectern service. </li>
+				<li>Provide typed definitions for the dictionary object.</li>
+				<li>Analyze dictionary versions diff.</li>
+			</ul>
+			<a href="#usage-examples" id="usage-examples" style="color: inherit; text-decoration: none;">
+				<h2>Usage examples:</h2>
+			</a>
+			<ul>
+				<li>icgc-argo/argo-clinical</li>
+			</ul>
+			<a href="#to-release-new-version" id="to-release-new-version" style="color: inherit; text-decoration: none;">
+				<h2>to release new version</h2>
+			</a>
+			<ul>
+				<li>bump the version number</li>
+				<li>run <code>npm config set &#39;//registry.npmjs.org/:_authToken&#39; &quot;${NPM_TOKEN}&quot; &amp;&amp; npm publish</code> </li>
+			</ul>
 		</div>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
@@ -3189,7 +3215,7 @@ img {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-object-literal"><a href="globals.html#error_messages" class="tsd-kind-icon">ERROR_<wbr>MESSAGES</a></li>
 							<li class="tsd-kind-object-literal"><a href="globals.html#logconfiguration" class="tsd-kind-icon">log<wbr>Configuration</a></li>
-							<li class="tsd-kind-object-literal"><a href="globals.html#schemaclient" class="tsd-kind-icon">schema<wbr>Client</a></li>
+							<li class="tsd-kind-object-literal"><a href="globals.html#restclient" class="tsd-kind-icon">rest<wbr>Client</a></li>
 						</ul>
 					</section>
 				</div>
@@ -3203,7 +3229,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Batch<wbr>Processing<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DeepReadonly</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>processedRecords<span class="tsd-signature-symbol">: </span><a href="classes/typeddatarecord.html" class="tsd-signature-type">TypedDataRecord</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>validationErrors<span class="tsd-signature-symbol">: </span><a href="interfaces/schemavalidationerror.html" class="tsd-signature-type">SchemaValidationError</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:109</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L109">src/schema-entities.ts:109</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3213,7 +3239,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Code<wbr>List<wbr>Restriction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:88</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L88">src/schema-entities.ts:88</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3223,7 +3249,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Field<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/change.html" class="tsd-signature-type">Change</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:60</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L60">src/schema-entities.ts:60</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3233,7 +3259,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Meta<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>core<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>changedFromCore<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>changedToCore<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:160</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L160">src/schema-entities.ts:160</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3259,7 +3285,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Mutable<wbr>Record<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-functions.ts:332</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L332">src/schema-functions.ts:332</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3277,7 +3303,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Processing<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>schema<span class="tsd-signature-symbol">: </span><a href="interfaces/schemadefinition.html" class="tsd-signature-type">SchemaDefinition</a>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/datarecord.html" class="tsd-signature-type">DataRecord</a><span class="tsd-signature-symbol">&gt;</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-functions.ts:326</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L326">src/schema-functions.ts:326</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3314,7 +3340,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Range<wbr>Restriction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>exclusiveMax<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>exclusiveMin<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>max<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>min<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:90</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L90">src/schema-entities.ts:90</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3341,7 +3367,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Raw<wbr>Mutable<wbr>Record<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-functions.ts:333</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L333">src/schema-functions.ts:333</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3359,7 +3385,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Regex<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:167</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L167">src/schema-entities.ts:167</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3374,7 +3400,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Required<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:171</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L171">src/schema-entities.ts:171</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3389,7 +3415,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Restriction<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>codeList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>range<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>regex<span class="tsd-signature-symbol">: </span><a href="globals.html#regexchanges" class="tsd-signature-type">RegexChanges</a><span class="tsd-signature-symbol">; </span>required<span class="tsd-signature-symbol">: </span><a href="globals.html#requiredchanges" class="tsd-signature-type">RequiredChanges</a><span class="tsd-signature-symbol">; </span>script<span class="tsd-signature-symbol">: </span><a href="globals.html#scriptchanges" class="tsd-signature-type">ScriptChanges</a><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:148</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L148">src/schema-entities.ts:148</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3423,7 +3449,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Schema<wbr>Processing<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DeepReadonly</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>processedRecord<span class="tsd-signature-symbol">: </span><a href="classes/typeddatarecord.html" class="tsd-signature-type">TypedDataRecord</a><span class="tsd-signature-symbol">; </span>validationErrors<span class="tsd-signature-symbol">: </span><a href="interfaces/schemavalidationerror.html" class="tsd-signature-type">SchemaValidationError</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:104</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L104">src/schema-entities.ts:104</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3433,7 +3459,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Schema<wbr>Types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:32</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L32">src/schema-entities.ts:32</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3443,7 +3469,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Script<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:175</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L175">src/schema-entities.ts:175</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3461,7 +3487,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">F<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">deepFreeze</span><span class="tsd-signature-symbol"> = deepFreeze</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/utils.ts:153</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L153">src/utils.ts:153</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3471,7 +3497,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">INVALID_<wbr>VALUE_<wbr>ERROR_<wbr>MESSAGE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"The value is not permissible for this field."</span><span class="tsd-signature-symbol"> = &quot;The value is not permissible for this field.&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-error-messages.ts:20</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L20">src/schema-error-messages.ts:20</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3481,10 +3507,10 @@ img {
 				<div class="tsd-signature tsd-kind-icon">L<span class="tsd-signature-symbol">:</span> <a href="interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> = loggerFor(__filename)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-entities.ts:22</li>
-						<li>Defined in src/schema-rest-client.ts:29</li>
-						<li>Defined in src/schema-functions.ts:57</li>
-						<li>Defined in src/parallel.ts:24</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-entities.ts#L22">src/schema-entities.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L29">src/schema-rest-client.ts:29</a></li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L57">src/schema-functions.ts:57</a></li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/parallel.ts#L24">src/parallel.ts:24</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3494,7 +3520,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">LOG_<wbr>LEVEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = process.env.LOG_LEVEL || &#x27;info&#x27;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:25</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L25">src/logger.ts:25</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3504,7 +3530,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">align<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">align</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:22</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3514,7 +3540,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">available<wbr>Cpus<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number(process.env.ALLOWED_CPUS) || cpuCount</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/parallel.ts:29</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/parallel.ts#L29">src/parallel.ts:29</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3524,7 +3550,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">combine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">combine</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:22</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3534,7 +3560,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">cpu<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = os.cpus().length</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/parallel.ts:27</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/parallel.ts#L27">src/parallel.ts:27</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3544,7 +3570,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">create<wbr>Logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">LoggerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Logger</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:21</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L21">src/logger.ts:21</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3575,7 +3601,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">format</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:21</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L21">src/logger.ts:21</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3585,7 +3611,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">fs<wbr>Promises<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">promises</span><span class="tsd-signature-symbol"> = fs.promises</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/utils.ts:25</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L25">src/utils.ts:25</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3595,7 +3621,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">json</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:22</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3605,7 +3631,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">label</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:22</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3615,7 +3641,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">parent<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MessagePort</span><span class="tsd-signature-symbol"> = workerThreads.parentPort</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-worker.js:21</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-worker.js#L21">src/schema-worker.js:21</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3625,7 +3651,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">pool<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StaticPool</span><span class="tsd-signature-symbol"> = new StaticPool({size: availableCpus,task: __dirname + &#x27;/schema-worker.js&#x27;,})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/parallel.ts:32</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/parallel.ts#L32">src/parallel.ts:32</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3635,7 +3661,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">pretty<wbr>Print<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">prettyPrint</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:22</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3645,7 +3671,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/home/ballabadi/dev/repos/overture/js-lectern-client/src/schema-functions&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;./schema-functions&#x27;)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-worker.js:42</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-worker.js#L42">src/schema-worker.js:42</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3655,7 +3681,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">simple<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">simple</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:22</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3665,7 +3691,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">timestamp</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:22</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3675,7 +3701,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">transports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Transports</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:21</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L21">src/logger.ts:21</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3685,7 +3711,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ts<wbr>Node<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/home/ballabadi/dev/repos/overture/js-lectern-client/node_modules/ts-node/dist/index&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;ts-node&#x27;)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-worker.js:24</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-worker.js#L24">src/schema-worker.js:24</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3695,7 +3721,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">winston<wbr>Logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Logger</span><span class="tsd-signature-symbol"> = winston.createLogger(logConfiguration)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:42</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L42">src/logger.ts:42</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3705,7 +3731,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">worker<wbr>Threads<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;worker_threads&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;worker_threads&#x27;)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-worker.js:20</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-worker.js#L20">src/schema-worker.js:20</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3722,7 +3748,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:53</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L53">src/change-analyzer.ts:53</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3745,7 +3771,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:124</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L124">src/change-analyzer.ts:124</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3774,7 +3800,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:197</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L197">src/change-analyzer.ts:197</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3803,7 +3829,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:209</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L209">src/change-analyzer.ts:209</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3832,7 +3858,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:135</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L135">src/change-analyzer.ts:135</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3861,7 +3887,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:209</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L209">src/schema-functions.ts:209</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3893,7 +3919,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:70</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L70">src/utils.ts:70</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3922,7 +3948,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:147</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L147">src/utils.ts:147</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3945,7 +3971,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-rest-client.ts:167</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L167">src/schema-rest-client.ts:167</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3974,7 +4000,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-rest-client.ts:96</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L96">src/schema-rest-client.ts:96</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3997,7 +4023,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:43</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L43">src/change-analyzer.ts:43</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4029,7 +4055,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-error-messages.ts:38</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L38">src/schema-error-messages.ts:38</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4052,7 +4078,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:59</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L59">src/schema-functions.ts:59</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4078,7 +4104,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:257</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L257">src/schema-functions.ts:257</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4107,7 +4133,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:107</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L107">src/utils.ts:107</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4130,7 +4156,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:66</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L66">src/utils.ts:66</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4159,7 +4185,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:103</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L103">src/utils.ts:103</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4182,7 +4208,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:31</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L31">src/change-analyzer.ts:31</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4205,7 +4231,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:35</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L35">src/change-analyzer.ts:35</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4228,7 +4254,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:111</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L111">src/utils.ts:111</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4251,7 +4277,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:99</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L99">src/utils.ts:99</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4274,7 +4300,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:86</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L86">src/utils.ts:86</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4297,7 +4323,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:90</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L90">src/utils.ts:90</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4320,7 +4346,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/change-analyzer.ts:39</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/change-analyzer.ts#L39">src/change-analyzer.ts:39</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4343,7 +4369,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:78</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L78">src/utils.ts:78</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4366,7 +4392,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:82</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L82">src/utils.ts:82</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4389,7 +4415,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:95</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L95">src/utils.ts:95</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4415,7 +4441,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:135</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L135">src/utils.ts:135</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4441,7 +4467,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:143</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L143">src/utils.ts:143</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4467,7 +4493,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-rest-client.ts:136</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L136">src/schema-rest-client.ts:136</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4499,7 +4525,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-rest-client.ts:110</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L110">src/schema-rest-client.ts:110</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4528,7 +4554,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/logger.ts:46</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L46">src/logger.ts:46</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4551,7 +4577,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:57</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L57">src/utils.ts:57</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4580,7 +4606,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:171</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L171">src/schema-functions.ts:171</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4615,7 +4641,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:115</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L115">src/schema-functions.ts:115</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4647,7 +4673,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-worker.js:44</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-worker.js#L44">src/schema-worker.js:44</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4672,7 +4698,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/parallel.ts:37</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/parallel.ts#L37">src/parallel.ts:37</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4704,7 +4730,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:80</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L80">src/schema-functions.ts:80</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4733,7 +4759,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-error-messages.ts:32</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L32">src/schema-error-messages.ts:32</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4759,7 +4785,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:117</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L117">src/utils.ts:117</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4782,7 +4808,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/utils.ts:121</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/utils.ts#L121">src/utils.ts:121</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4805,7 +4831,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:294</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L294">src/schema-functions.ts:294</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4844,7 +4870,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/schema-functions.ts:310</li>
+								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-functions.ts#L310">src/schema-functions.ts:310</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4872,7 +4898,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ERROR_<wbr>MESSAGES<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-error-messages.ts:21</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L21">src/schema-error-messages.ts:21</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -4885,7 +4911,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-error-messages.ts:24</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L24">src/schema-error-messages.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -4902,7 +4928,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-error-messages.ts:23</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L23">src/schema-error-messages.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4925,7 +4951,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-error-messages.ts:25</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L25">src/schema-error-messages.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4948,7 +4974,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-error-messages.ts:26</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L26">src/schema-error-messages.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -4965,7 +4991,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-error-messages.ts:22</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L22">src/schema-error-messages.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -4982,7 +5008,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-error-messages.ts:27</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-error-messages.ts#L27">src/schema-error-messages.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -5002,7 +5028,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">log<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/logger.ts:29</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L29">src/logger.ts:29</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -5011,7 +5037,7 @@ img {
 					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Format</span><span class="tsd-signature-symbol"> = combine(json(), simple(), timestamp())</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/logger.ts:31</li>
+							<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L31">src/logger.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5021,7 +5047,7 @@ img {
 					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = LOG_LEVEL</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/logger.ts:30</li>
+							<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L30">src/logger.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5031,22 +5057,22 @@ img {
 					<div class="tsd-signature tsd-kind-icon">transports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ConsoleTransportInstance</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [new winston.transports.Console()]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/logger.ts:32</li>
+							<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/logger.ts#L32">src/logger.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-object-literal">
-				<a name="schemaclient" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> schema<wbr>Client</h3>
-				<div class="tsd-signature tsd-kind-icon">schema<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<a name="restclient" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> rest<wbr>Client</h3>
+				<div class="tsd-signature tsd-kind-icon">rest<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/schema-rest-client.ts:41</li>
+						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L41">src/schema-rest-client.ts:41</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
-					<a name="schemaclient.fetchdiff" class="tsd-anchor"></a>
+					<a name="restclient.fetchdiff" class="tsd-anchor"></a>
 					<h3>fetch<wbr>Diff</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
 						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Diff<span class="tsd-signature-symbol">(</span>schemaSvcBaseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fromVersion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, toVersion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/schemasdictionarydiffs.html" class="tsd-signature-type">SchemasDictionaryDiffs</a><span class="tsd-signature-symbol">&gt;</span></li>
@@ -5055,7 +5081,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-rest-client.ts:66</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L66">src/schema-rest-client.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -5078,7 +5104,7 @@ img {
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
-					<a name="schemaclient.fetchschema" class="tsd-anchor"></a>
+					<a name="restclient.fetchschema" class="tsd-anchor"></a>
 					<h3>fetch<wbr>Schema</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
 						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Schema<span class="tsd-signature-symbol">(</span>schemaSvcUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/schemasdictionary.html" class="tsd-signature-type">SchemasDictionary</a><span class="tsd-signature-symbol">&gt;</span></li>
@@ -5087,7 +5113,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/schema-rest-client.ts:42</li>
+									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/72c03e5/src/schema-rest-client.ts#L42">src/schema-rest-client.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>

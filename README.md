@@ -12,3 +12,7 @@
 ## Usage examples:
 - icgc-argo/argo-clinical
 
+
+## to release new version
+- bump the version number
+- run ` npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish` 

@@ -38,7 +38,7 @@ export interface SchemaServiceRestClient {
   ): Promise<SchemasDictionaryDiffs>;
 }
 
-export const schemaClient: SchemaServiceRestClient = {
+export const restClient: SchemaServiceRestClient = {
   fetchSchema: async (
     schemaSvcUrl: string,
     name: string,
