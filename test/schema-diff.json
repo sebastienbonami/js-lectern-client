@@ -219,5 +219,44 @@
         }
       }
     }
-  ]
+  ],
+  [
+   "sample_registration.program_id",
+   {
+     "left": {
+       "name": "program_id",
+       "valueType": "string",
+       "description": "Unique identifier of the ARGO program.",
+       "meta": {
+         "validationDependency": true,
+         "primaryId": true,
+         "examples": "PACA-AU,BR-CA",
+         "displayName": "Program ID"
+       },
+       "restrictions": {
+         "required": true
+       }
+     },
+     "right": {
+       "name": "program_id",
+       "valueType": "integer",
+       "description": "Unique identifier of the ARGO program.",
+       "meta": {
+         "validationDependency": true,
+         "primaryId": true,
+         "examples": "PACA-AU,BR-CA",
+         "displayName": "Program ID"
+       },
+       "restrictions": {
+         "required": true
+       }
+     },
+     "diff": {
+       "valueType": {
+         "type": "updated",
+         "data": "integer"
+       }
+     }
+   }
+ ]
 ]
