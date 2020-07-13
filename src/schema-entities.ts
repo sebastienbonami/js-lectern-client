@@ -143,6 +143,7 @@ export interface ChangeAnalysis {
   isArrayDesignationChanges: string[];
   restrictionsChanges: RestrictionChanges;
   metaChanges?: MetaChanges;
+  valueTypeChanges: string[];
 }
 
 export type RestrictionChanges = {

@@ -91,6 +91,7 @@ export const analyzeChanges = (schemasDiff: SchemasDictionaryDiffs): ChangeAnaly
         changedFromCore: [],
       },
     },
+    valueTypeChanges: []
   };
 
   for (const field of Object.keys(schemasDiff)) {
@@ -114,6 +115,10 @@ export const analyzeChanges = (schemasDiff: SchemasDictionaryDiffs): ChangeAnaly
         if (fieldDiff.isArray) {
           categorizeFieldArrayDesignationChange(analysis, field, fieldDiff.isArray);
         }
+
+        if (fieldDiff.valueType) {
+          categorizerValueTypeChange(analysis, field, fieldDiff.valueType);
+        }
       }
     }
   }
@@ -130,6 +135,14 @@ const categorizeFieldArrayDesignationChange = (
   if (!(changes.type === 'created' && changes.data === false)) {
     analysis.isArrayDesignationChanges.push(field);
   }
+};
+
+const categorizerValueTypeChange = (
+  analysis: ChangeAnalysis,
+  field: string,
+  changes: { [field: string]: FieldChanges } | Change,
+) => {
+  analysis.valueTypeChanges.push(field);
 };
 
 const categorizeRestrictionChanges = (
