@@ -120,6 +120,7 @@ const expectedResult: ChangeAnalysis = {
     },
   },
   isArrayDesignationChanges: ['primary_diagnosis.presenting_symptoms'],
+  valueTypeChanges: ["sample_registration.program_id"]
 };
 
 describe('change-analyzer', () => {
