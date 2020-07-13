@@ -586,6 +586,8 @@ namespace validation {
     return !regexPattern.test(value);
   };
 
+  const ctx = vm.createContext();
+
   const validateWithScript = (
     field: FieldDefinition,
     record: TypedDataRecord,
@@ -594,7 +596,7 @@ namespace validation {
     message: string;
   } => {
     try {
-      const sandbox = {
+      const args = {
         $row: record,
         $field: record[field.name],
         $name: field.name,
@@ -611,8 +613,6 @@ namespace validation {
           ? [field.restrictions.script]
           : field.restrictions.script;
 
-      const ctx = vm.createContext(sandbox);
-
       let result: {
         valid: boolean;
         message: string;
@@ -622,8 +622,10 @@ namespace validation {
       };
 
       for (const scriptString of scripts) {
-        const script = new vm.Script(scriptString);
-        result = script.runInContext(ctx);
+        const script = getScript(scriptString);
+        const valFunc = script.runInContext(ctx);
+        if (!valFunc) throw new Error('Invalid script');
+        result = valFunc(args);
         /* Return the first script that's invalid. Otherwise result will be valid with message: 'ok'*/
         if (!result.valid) break;
       }
@@ -640,6 +642,11 @@ namespace validation {
         message: 'failed to run script validation, check script and the input',
       };
     }
+  };
+
+  const getScript = (scriptString: string) => {
+    const script = new vm.Script(scriptString);
+    return script;
   };
 
   const buildError = (
