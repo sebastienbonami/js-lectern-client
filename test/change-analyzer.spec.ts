@@ -106,7 +106,14 @@ const expectedResult: ChangeAnalysis = {
       deleted: [],
     },
     range: {
-      updated: [],
+      updated: [
+        {
+          definition: {
+            max: 1,
+          },
+          field: 'specimen.percent_stromal_cells'
+        }
+      ],
       created: [
         {
           field: 'donor.survival_time',
@@ -120,7 +127,7 @@ const expectedResult: ChangeAnalysis = {
     },
   },
   isArrayDesignationChanges: ['primary_diagnosis.presenting_symptoms'],
-  valueTypeChanges: ["sample_registration.program_id"]
+  valueTypeChanges: ['sample_registration.program_id']
 };
 
 describe('change-analyzer', () => {
