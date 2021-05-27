@@ -194,15 +194,27 @@ describe('schema-functions', () => {
       errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
       fieldName: 'unit_number',
       index: 0,
-      info: {},
-      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE),
+      info: {
+        exclusiveMax: 999,
+        min: 0
+      },
+      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE, { info: {
+        exclusiveMax: 999,
+        min: 0
+      }}),
     });
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
       fieldName: 'unit_number',
       index: 2,
-      info: {},
-      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE),
+      info: {
+        exclusiveMax: 999,
+        min: 0
+      },
+      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE, { info: {
+        exclusiveMax: 999,
+        min: 0
+      }}),
     });
   });
 
@@ -352,21 +364,19 @@ describe('schema-functions', () => {
       },
     ]);
     chai.expect(result.validationErrors.length).to.eq(2);
-    const baseInvalidValueErr = {
-      errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
-      message: 'Value is out of permissible range',
-      index: 0,
-      info: {},
-    };
     chai.expect(result.validationErrors).to.deep.include({
-      ...baseInvalidValueErr,
+      errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
+      message: 'Value is out of permissible range, value must be > 0 and <= 1.',
+      index: 0,
       fieldName: 'fraction',
-      info: { value: [2, 3] },
+      info: { max: 1, exclusiveMin: 0 },
     });
     chai.expect(result.validationErrors).to.deep.include({
-      ...baseInvalidValueErr,
+      errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
+      message: 'Value is out of permissible range, value must be >= -10 and <= 10.',
+      index: 0,
       fieldName: 'integers',
-      info: { value: [-100] },
+      info: { max: 10, min: -10 },
     });
   });
 

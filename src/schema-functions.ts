@@ -51,9 +51,9 @@ import {
   isNumberArray,
 } from './utils';
 import schemaErrorMessage from './schema-error-messages';
-import _ from 'lodash';
 import { loggerFor } from './logger';
 import { DeepReadonly } from 'deep-freeze';
+import _ from 'lodash';
 const L = loggerFor(__filename);
 
 export const getSchemaFieldNamesWithPriority = (
@@ -409,7 +409,7 @@ namespace validation {
 
         const invalidValues = recordFieldValues.filter(v => isOutOfRange(range, v));
         if (invalidValues.length !== 0) {
-          const info = field.isArray ? { value: invalidValues } : undefined;
+          const info = { ...range };
           return buildError(SchemaValidationErrorTypes.INVALID_BY_RANGE, field.name, index, info);
         }
         return undefined;
