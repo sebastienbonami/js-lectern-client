@@ -19,10 +19,7 @@
 
 import chai from 'chai';
 import * as schemaService from '../src/schema-functions';
-import {
-  SchemasDictionary,
-  SchemaValidationErrorTypes,
-} from '../src/schema-entities';
+import { SchemasDictionary, SchemaValidationErrorTypes } from '../src/schema-entities';
 import schemaErrorMessage from '../src/schema-error-messages';
 import { loggerFor } from '../src/logger';
 const L = loggerFor(__filename);
@@ -122,11 +119,12 @@ describe('schema-functions', () => {
         postal_code: '12345',
       },
     ]);
+
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_FIELD_VALUE_TYPE,
       fieldName: 'unit_number',
       index: 0,
-      info: {},
+      info: { value: ['abc'] },
       message: VALUE_NOT_ALLOWED,
     });
   });
@@ -190,18 +188,22 @@ describe('schema-functions', () => {
         unit_number: '500000',
       },
     ]);
+
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
       fieldName: 'unit_number',
       index: 0,
       info: {
         exclusiveMax: 999,
-        min: 0
+        min: 0,
+        value: [-1],
       },
-      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE, { info: {
-        exclusiveMax: 999,
-        min: 0
-      }}),
+      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE, {
+        info: {
+          exclusiveMax: 999,
+          min: 0,
+        },
+      }),
     });
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
@@ -209,12 +211,15 @@ describe('schema-functions', () => {
       index: 2,
       info: {
         exclusiveMax: 999,
-        min: 0
+        min: 0,
+        value: [500000],
       },
-      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE, { info: {
-        exclusiveMax: 999,
-        min: 0
-      }}),
+      message: schemaErrorMessage(SchemaValidationErrorTypes.INVALID_BY_RANGE, {
+        info: {
+          exclusiveMax: 999,
+          min: 0,
+        },
+      }),
     });
   });
 
@@ -233,19 +238,20 @@ describe('schema-functions', () => {
         postal_code: '15523',
       },
     ]);
+
     chai.expect(result.validationErrors.length).to.eq(2);
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_BY_SCRIPT,
       fieldName: 'postal_code',
       index: 0,
-      info: { message: 'invalid postal code for US' },
+      info: { message: 'invalid postal code for US', value: '12' },
       message: 'invalid postal code for US',
     });
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_BY_SCRIPT,
       fieldName: 'postal_code',
       index: 1,
-      info: { message: 'invalid postal code for CANADA' },
+      info: { message: 'invalid postal code for CANADA', value: 'ABC' },
       message: 'invalid postal code for CANADA',
     });
   });
@@ -296,12 +302,13 @@ describe('schema-functions', () => {
         survival_time: '0.5',
       },
     ]);
+
     chai.expect(result.validationErrors.length).to.eq(1);
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_FIELD_VALUE_TYPE,
       fieldName: 'survival_time',
       index: 0,
-      info: {},
+      info: { value: ['0.5'] },
       message: VALUE_NOT_ALLOWED,
     });
   });
@@ -363,20 +370,21 @@ describe('schema-functions', () => {
         integers: ['-100', '-2'],
       },
     ]);
+
     chai.expect(result.validationErrors.length).to.eq(2);
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
       message: 'Value is out of permissible range, value must be > 0 and <= 1.',
       index: 0,
       fieldName: 'fraction',
-      info: { max: 1, exclusiveMin: 0 },
+      info: { value: [2, 3], max: 1, exclusiveMin: 0 },
     });
     chai.expect(result.validationErrors).to.deep.include({
       errorType: SchemaValidationErrorTypes.INVALID_BY_RANGE,
       message: 'Value is out of permissible range, value must be >= -10 and <= 10.',
       index: 0,
       fieldName: 'integers',
-      info: { max: 10, min: -10 },
+      info: { value: [-100], max: 10, min: -10 },
     });
   });
 
