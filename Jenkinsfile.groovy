@@ -32,6 +32,7 @@ spec:
             steps {
                 container('node') {
                   sh "sleep infinity"
+                  sh "pwd; id"
                   sh "npm ci"
                   sh "npm run test"
                   sh "npm run build"
