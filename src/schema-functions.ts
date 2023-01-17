@@ -409,7 +409,7 @@ namespace validation {
 
         const invalidValues = recordFieldValues.filter(v => isOutOfRange(range, v));
         if (invalidValues.length !== 0) {
-          const info = { ...range };
+          const info = { value: invalidValues, ...range };
           return buildError(SchemaValidationErrorTypes.INVALID_BY_RANGE, field.name, index, info);
         }
         return undefined;
@@ -429,6 +429,7 @@ namespace validation {
           if (!scriptResult.valid) {
             return buildError(SchemaValidationErrorTypes.INVALID_BY_SCRIPT, field.name, index, {
               message: scriptResult.message,
+              value: rec[field.name]
             });
           }
         }
@@ -470,9 +471,10 @@ namespace validation {
 
         const recordFieldValues = convertToArray(rec[field.name]); // put all values into array
         const invalidValues = recordFieldValues.filter(v => isInvalidFieldType(field.valueType, v));
+        const info = {value: invalidValues};
 
         if (invalidValues.length !== 0) {
-          return buildError(SchemaValidationErrorTypes.INVALID_FIELD_VALUE_TYPE, field.name, index);
+          return buildError(SchemaValidationErrorTypes.INVALID_FIELD_VALUE_TYPE, field.name, index, info);
         }
         return undefined;
       })

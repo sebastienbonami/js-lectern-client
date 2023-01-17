@@ -10,10 +10,15 @@ pipeline {
 apiVersion: v1
 kind: Pod
 spec:
+  securityContext:
+    runAsUser: 1000
   containers:
   - name: node
     image: node:12.6.0
     tty: true
+    env:
+    - name: HOME
+      value: /home/jenkins/agent
 """
         }
     }
