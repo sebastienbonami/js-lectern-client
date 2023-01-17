@@ -36,8 +36,6 @@ spec:
         stage('Test') {
             steps {
                 container('node') {
-                  sh "pwd; id"
-                  sh "sleep infinity"
                   sh "npm ci"
                   sh "npm run test"
                   sh "npm run build"
