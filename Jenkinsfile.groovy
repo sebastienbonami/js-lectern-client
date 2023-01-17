@@ -16,6 +16,9 @@ spec:
   - name: node
     image: node:12.6.0
     tty: true
+    env:
+    - name: HOME
+      value: /home/jenkins/agent
 """
         }
     }
