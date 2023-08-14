@@ -17,7 +17,23 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+import { isArray } from 'lodash';
 import { RangeRestriction } from './schema-entities';
+
+function getForeignKeyErrorMsg(errorData: any) {
+  const valueEntries = Object.entries(errorData.info.value);
+  const formattedKeyValues: string[] = valueEntries.map(([key, value]) => {
+    if (isArray(value)) {
+      return `${key}: [${value.join(', ')}]`;
+    } else {
+      return `${key}: ${value}`;
+    }
+  });
+  const valuesAsString = formattedKeyValues.join(', ');
+  const detail = `Key ${valuesAsString} is not present in schema ${errorData.info.foreignSchema}`;
+  const msg = `Record violates foreign key restriction defined for field(s) ${errorData.fieldName}. ${detail}.`;
+  return msg;
+}
 
 const INVALID_VALUE_ERROR_MESSAGE = 'The value is not permissible for this field.';
 const ERROR_MESSAGES: { [key: string]: (errorData: any) => string } = {
@@ -27,7 +43,8 @@ const ERROR_MESSAGES: { [key: string]: (errorData: any) => string } = {
   INVALID_BY_SCRIPT: error => error.info.message,
   INVALID_ENUM_VALUE: () => INVALID_VALUE_ERROR_MESSAGE,
   MISSING_REQUIRED_FIELD: errorData => `${errorData.fieldName} is a required field.`,
-  INVALID_BY_UNIQUE: errorData => `Value for ${errorData.fieldName} must be unique.`
+  INVALID_BY_UNIQUE: errorData => `Value for ${errorData.fieldName} must be unique.`,
+  INVALID_BY_FOREIGN_KEY: errorData => getForeignKeyErrorMsg(errorData),
 };
 
 // Returns the formatted message for the given error key, taking any required properties from the info object

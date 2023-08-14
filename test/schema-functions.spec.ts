@@ -539,8 +539,241 @@ describe('schema-functions', () => {
       info: { value: ['unique_value_1', 'unique_value_2'] },
     });
   });
-});
 
+  it('should pass foreignKey restriction validation when values exist in foreign schema', () => {
+    
+    const parent_schema_1_data = [
+      {
+        id: 'parent_schema_1_id_1',
+        name: 'parent_schema_1_name_1'
+      },
+      {
+        id: 'parent_schema_1_id_2',
+        name: 'parent_schema_1_name_2'
+      }
+    ];
+    
+    const child_schema_simple_fk_data =  [
+      {
+        id: '1',
+        parent_schema_1_id: 'parent_schema_1_id_1',
+      },
+      {
+        id: '2',
+        parent_schema_1_id: 'parent_schema_1_id_2',
+      }
+    ];
+    const schemaData = {
+      'parent_schema_1': parent_schema_1_data,
+      'child_schema_simple_fk': child_schema_simple_fk_data};
+
+    const result = schemaService.processSchemas(schema, schemaData);
+
+    chai.expect(result['parent_schema_1'].validationErrors.length).to.eq(0);
+    chai.expect(result['child_schema_simple_fk'].validationErrors.length).to.eq(0);
+  });
+  
+  it('should pass foreignKey restriction validation when local schema has null values', () => {
+    const parent_schema_1_data = [
+      {
+        id: 'parent_schema_1_id_1',
+        name: 'parent_schema_1_name_1'
+      },
+      {
+        id: 'parent_schema_1_id_2',
+        name: 'parent_schema_1_name_2'
+      }
+    ];
+
+    const child_schema_simple_fk_data = [
+      {
+        id: '1',
+        parent_schema_1_id: 'parent_schema_1_id_1',
+      },
+      {
+        id: '2',
+        parent_schema_1_id: '',
+      }
+    ];
+    const schemaData = {
+      'parent_schema_1': parent_schema_1_data,
+      'child_schema_simple_fk': child_schema_simple_fk_data
+    };
+
+    const result = schemaService.processSchemas(schema, schemaData);
+
+    chai.expect(result['parent_schema_1'].validationErrors.length).to.eq(0);
+    chai.expect(result['child_schema_simple_fk'].validationErrors.length).to.eq(0);
+  });
+
+  it('should pass foreignKey restriction validation when values exist in foreign schema (composite fk)', () => {
+    
+    const parent_schema_1_data = [
+      {
+        id: 'parent_schema_1_id_1',
+        external_id: 'parent_schema_1_external_id_1',
+        name: 'parent_schema_1_name_1'
+      },
+      {
+        id: 'parent_schema_1_id_2',
+        external_id: 'parent_schema_1_external_id_2',
+        name: 'parent_schema_1_name_2'
+      }
+    ];
+    
+    const child_schema_composite_fk_data =  [
+      {
+        id: '1',
+        parent_schema_1_id: 'parent_schema_1_id_1',
+        parent_schema_1_external_id: 'parent_schema_1_external_id_1',
+      },
+      {
+        id: '2',
+        parent_schema_1_id: 'parent_schema_1_id_2',
+        parent_schema_1_external_id: 'parent_schema_1_external_id_2',
+      }
+    ];
+    const schemaData = {
+      'parent_schema_1': parent_schema_1_data,
+      'child_schema_composite_fk': child_schema_composite_fk_data};
+
+    const result = schemaService.processSchemas(schema, schemaData);
+
+    chai.expect(result['parent_schema_1'].validationErrors.length).to.eq(0);
+    chai.expect(result['child_schema_composite_fk'].validationErrors.length).to.eq(0);
+  });
+
+  it('should fail foreignKey restriction validation when value does not exist in foreign schema', () => {
+    
+    const parent_schema_1_data = [
+      {
+        id: 'parent_schema_1_id_1',
+        name: 'parent_schema_1_name_1'
+      },
+      {
+        id: 'parent_schema_1_id_2',
+        name: 'parent_schema_1_name_2'
+      }
+    ];
+    
+    const child_schema_simple_fk_data =  [
+      {
+        id: '1',
+        parent_schema_1_id: 'parent_schema_1_id_1',
+      },
+      {
+        id: '2',
+        parent_schema_1_id: 'non_existing_value_in_foreign_schema',
+      }
+    ];
+    const schemaData = {
+      'parent_schema_1': parent_schema_1_data,
+      'child_schema_simple_fk': child_schema_simple_fk_data};
+
+    const result = schemaService.processSchemas(schema, schemaData);
+    const childSchemaErrors = result['child_schema_simple_fk'].validationErrors;
+
+    chai.expect(childSchemaErrors.length).to.eq(1);
+    chai.expect(childSchemaErrors[0]).to.deep.eq({
+      errorType: SchemaValidationErrorTypes.INVALID_BY_FOREIGN_KEY,
+      message:
+        'Record violates foreign key restriction defined for field(s) parent_schema_1_id. Key parent_schema_1_id: non_existing_value_in_foreign_schema is not present in schema parent_schema_1.',
+      fieldName: 'parent_schema_1_id',
+      index: 1,
+      info: { "foreignSchema": "parent_schema_1", value: { 'parent_schema_1_id': 'non_existing_value_in_foreign_schema' } },
+    });
+
+  });
+
+  it('should fail foreignKey restriction validation when values do not exist in foreign schema (composite fk)', () => {
+    
+    const parent_schema_1_data = [
+      {
+        id: 'parent_schema_1_id_1',
+        external_id: 'parent_schema_1_external_id_1',
+        name: 'parent_schema_1_name_1'
+      },
+      {
+        id: 'parent_schema_1_id_2',
+        external_id: 'parent_schema_1_external_id_2',
+        name: 'parent_schema_1_name_2'
+      }
+    ];
+    
+    const child_schema_composite_fk_data =  [
+      {
+        id: '1',
+        parent_schema_1_id: 'parent_schema_1_id_1',
+        parent_schema_1_external_id: 'parent_schema_1_external_id_1',
+      },
+      {
+        id: '2',
+        parent_schema_1_id: 'parent_schema_1_id_2',
+        parent_schema_1_external_id: 'non_existing_value_in_foreign_schema',
+      }
+    ];
+    const schemaData = {
+      'parent_schema_1': parent_schema_1_data,
+      'child_schema_composite_fk': child_schema_composite_fk_data};
+
+    const result = schemaService.processSchemas(schema, schemaData);
+    const childSchemaErrors = result['child_schema_composite_fk'].validationErrors;
+    
+    chai.expect(childSchemaErrors.length).to.eq(1);
+    chai.expect(childSchemaErrors[0]).to.deep.eq({
+      errorType: SchemaValidationErrorTypes.INVALID_BY_FOREIGN_KEY,
+      message:
+        'Record violates foreign key restriction defined for field(s) parent_schema_1_id, parent_schema_1_external_id. Key parent_schema_1_id: parent_schema_1_id_2, parent_schema_1_external_id: non_existing_value_in_foreign_schema is not present in schema parent_schema_1.',
+      fieldName: 'parent_schema_1_id, parent_schema_1_external_id',
+      index: 1,
+      info: {
+        "foreignSchema": "parent_schema_1",
+        value: { 'parent_schema_1_external_id': 'non_existing_value_in_foreign_schema', 'parent_schema_1_id': 'parent_schema_1_id_2' }
+      },
+    });
+  });
+
+  it('should fail foreignKey restriction validation when values (array) do not match in foreign schema (composite fk)', () => {
+    
+    const parent_schema_2_data = [
+      {
+        id1: ['id1_1', 'id1_2'],
+        id2: ['id2_1']
+      }
+    ];
+    
+    const child_schema_composite_array_values_fk_data =  [
+      {
+        id: '1',
+        parent_schema_2_id1: ['id1_1'],
+        parent_schema_2_id12: ['id1_2', 'id2_1'],
+      }
+    ];
+    const schemaData = {
+      'parent_schema_2': parent_schema_2_data,
+      'child_schema_composite_array_values_fk': child_schema_composite_array_values_fk_data};
+
+    const result = schemaService.processSchemas(schema, schemaData);
+    const childSchemaErrors = result['child_schema_composite_array_values_fk'].validationErrors;
+
+    chai.expect(childSchemaErrors.length).to.eq(1);
+    chai.expect(childSchemaErrors[0]).to.deep.eq({
+      errorType: SchemaValidationErrorTypes.INVALID_BY_FOREIGN_KEY,
+      message:
+        'Record violates foreign key restriction defined for field(s) parent_schema_2_id1, parent_schema_2_id12. Key parent_schema_2_id1: [id1_1], parent_schema_2_id12: [id1_2, id2_1] is not present in schema parent_schema_2.',
+      fieldName: 'parent_schema_2_id1, parent_schema_2_id12',
+      index: 0,
+      info: {
+        "foreignSchema": "parent_schema_2",
+        value: {
+          "parent_schema_2_id1": ['id1_1'],
+          "parent_schema_2_id12": ['id1_2', 'id2_1']
+        }
+      },
+    });
+  });
+
+});
 
 
 const records = [
