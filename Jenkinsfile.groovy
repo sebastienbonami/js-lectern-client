@@ -14,7 +14,7 @@ spec:
     runAsUser: 1000
   containers:
   - name: node
-    image: node:12.6.0
+    image: node:18-alpine
     tty: true
     env:
     - name: HOME
