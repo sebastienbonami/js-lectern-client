@@ -23,6 +23,4 @@
 
 - bump the version number
 
-- publish to npm and tag git:
-Jenkinsfile will do that when a commit is added to master.
-if you need to do that manually then run `npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish` 
+- push to main branch, this will trigger the github action to publish the package to npm
