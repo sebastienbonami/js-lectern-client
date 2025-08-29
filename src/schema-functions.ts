@@ -342,7 +342,7 @@ const getTypedValue = (field: FieldDefinition, valueType: ValueType, rawValue: s
       break;
     case ValueType.BOOLEAN:
       // we have to lower case in case of inconsistent letters (boolean requires all small letters).
-      typedValue = Boolean(rawValue.toLowerCase());
+      typedValue = Boolean(rawValue.toLowerCase() === 'true');
       break;
   }
 

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SchemaDefinition | @ferlab/lectern-client</title>
+	<title>SchemaRestriction | @ferlab/lectern-client</title>
 	<meta name="description" content="Documentation for @ferlab/lectern-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2723,19 +2723,13 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="schemadefinition.html" class="tsd-kind-icon">Schema<wbr>Definition</a>
+			<a href="schemarestriction.html" class="tsd-kind-icon">Schema<wbr>Restriction</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="schemadefinition.html#description" class="tsd-kind-icon">description</a>
+					<a href="schemarestriction.html#foreignkey" class="tsd-kind-icon">foreign<wbr>Key</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="schemadefinition.html#fields" class="tsd-kind-icon">fields</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="schemadefinition.html#name" class="tsd-kind-icon">name</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="schemadefinition.html#restrictions" class="tsd-kind-icon">restrictions</a>
+					<a href="schemarestriction.html#uniquekey" class="tsd-kind-icon">unique<wbr>Key</a>
 				</li>
 			</ul>
 		</li>
@@ -2747,7 +2741,7 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">SchemaDefinition</span>
+					<span class="target">SchemaRestriction</span>
 				</li>
 			</ul>
 		</section>
@@ -2758,10 +2752,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="schemadefinition.html#description" class="tsd-kind-icon">description</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="schemadefinition.html#fields" class="tsd-kind-icon">fields</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="schemadefinition.html#name" class="tsd-kind-icon">name</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="schemadefinition.html#restrictions" class="tsd-kind-icon">restrictions</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="schemarestriction.html#foreignkey" class="tsd-kind-icon">foreign<wbr>Key</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="schemarestriction.html#uniquekey" class="tsd-kind-icon">unique<wbr>Key</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2770,42 +2762,22 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="description" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> description</h3>
-				<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="foreignkey" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> foreign<wbr>Key</h3>
+				<div class="tsd-signature tsd-kind-icon">foreign<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>mappings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>foreign<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>local<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L42">src/schema-entities.ts:42</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L77">src/schema-entities.ts:77</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="fields" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> fields</h3>
-				<div class="tsd-signature tsd-kind-icon">fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="fielddefinition.html" class="tsd-signature-type">FieldDefinition</a><span class="tsd-signature-symbol">&gt;</span></div>
+				<a name="uniquekey" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> unique<wbr>Key</h3>
+				<div class="tsd-signature tsd-kind-icon">unique<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L44">src/schema-entities.ts:44</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="name" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> name</h3>
-				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L41">src/schema-entities.ts:41</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="restrictions" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> restrictions</h3>
-				<div class="tsd-signature tsd-kind-icon">restrictions<span class="tsd-signature-symbol">:</span> <a href="schemarestriction.html" class="tsd-signature-type">SchemaRestriction</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L43">src/schema-entities.ts:43</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L84">src/schema-entities.ts:84</a></li>
 					</ul>
 				</aside>
 			</section>

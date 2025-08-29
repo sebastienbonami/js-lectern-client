@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@overturebio-stack/lectern-client | @overturebio-stack/lectern-client</title>
-	<meta name="description" content="Documentation for @overturebio-stack/lectern-client">
+	<title>@ferlab/lectern-client | @ferlab/lectern-client</title>
+	<meta name="description" content="Documentation for @ferlab/lectern-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -2692,7 +2692,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">@overturebio-stack/lectern-client</a></strong>
+					<strong><a href="index.html">@ferlab/lectern-client</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2771,6 +2771,9 @@ img {
 			<a href="interfaces/schemadefinition.html" class="tsd-kind-icon">Schema<wbr>Definition</a>
 		</li>
 		<li class=" tsd-kind-interface">
+			<a href="interfaces/schemarestriction.html" class="tsd-kind-icon">Schema<wbr>Restriction</a>
+		</li>
+		<li class=" tsd-kind-interface">
 			<a href="interfaces/schemaservicerestclient.html" class="tsd-kind-icon">Schema<wbr>Service<wbr>Rest<wbr>Client</a>
 		</li>
 		<li class=" tsd-kind-interface">
@@ -2817,6 +2820,9 @@ img {
 		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#restrictionchanges" class="tsd-kind-icon">Restriction<wbr>Changes</a>
+		</li>
+		<li class=" tsd-kind-type-alias">
+			<a href="globals.html#schemadata" class="tsd-kind-icon">Schema<wbr>Data</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#schemaprocessingresult" class="tsd-kind-icon">Schema<wbr>Processing<wbr>Result</a>
@@ -2933,13 +2939,31 @@ img {
 			<a href="globals.html#fetchdiffandanalyze" class="tsd-kind-icon">fetch<wbr>Diff<wbr>And<wbr>Analyze</a>
 		</li>
 		<li class=" tsd-kind-function">
+			<a href="globals.html#findduplicatekeys" class="tsd-kind-icon">find<wbr>Duplicate<wbr>Keys</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#findmissingforeignkeys" class="tsd-kind-icon">find<wbr>Missing<wbr>Foreign<wbr>Keys</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#getforeignkeyerrormsg" class="tsd-kind-icon">get<wbr>Foreign<wbr>Key<wbr>Error<wbr>Msg</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#getnotnullschemadefinitionfromdictionary" class="tsd-kind-icon">get<wbr>Not<wbr>Null<wbr>Schema<wbr>Definition<wbr>From<wbr>Dictionary</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="globals.html#getregexerrormsg" class="tsd-kind-icon">get<wbr>Regex<wbr>Error<wbr>Msg</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#getschemafieldnameswithpriority" class="tsd-kind-icon">get<wbr>Schema<wbr>Field<wbr>Names<wbr>With<wbr>Priority</a>
 		</li>
 		<li class=" tsd-kind-function">
+			<a href="globals.html#getsortedrecordkey" class="tsd-kind-icon">get<wbr>Sorted<wbr>Record<wbr>Key</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="globals.html#gettypedvalue" class="tsd-kind-icon">get<wbr>Typed<wbr>Value</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#getuniquekeyerrormsg" class="tsd-kind-icon">get<wbr>Unique<wbr>Key<wbr>Error<wbr>Msg</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#isabsent" class="tsd-kind-icon">is<wbr>Absent</a>
@@ -3014,7 +3038,19 @@ img {
 			<a href="globals.html#processrecords" class="tsd-kind-icon">process<wbr>Records</a>
 		</li>
 		<li class=" tsd-kind-function">
+			<a href="globals.html#processschemas" class="tsd-kind-icon">process<wbr>Schemas</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#rangetosymbol" class="tsd-kind-icon">range<wbr>ToSymbol</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#renameproperties" class="tsd-kind-icon">rename<wbr>Properties</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="globals.html#schemaerrormessage" class="tsd-kind-icon">schema<wbr>Error<wbr>Message</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#selectfieldsfromdataset" class="tsd-kind-icon">select<wbr>Fields<wbr>From<wbr>Dataset</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#sleep" class="tsd-kind-icon">sleep</a>
@@ -3027,6 +3063,9 @@ img {
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#validateaftertypeconversion" class="tsd-kind-icon">validate<wbr>After<wbr>Type<wbr>Conversion</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#validaterecordsset" class="tsd-kind-icon">validate<wbr>Records<wbr>Set</a>
 		</li>
 		<li class=" tsd-kind-object-literal">
 			<a href="globals.html#error_messages" class="tsd-kind-icon">ERROR_<wbr>MESSAGES</a>
@@ -3042,6 +3081,11 @@ img {
 <div class="container container-main">
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
+			<blockquote>
+				<p><strong>Deprecation Notice</strong></p>
+				<p>This version of the Lectern client is considered deprecated. The officially supported version has been moved to <a href="https://www.npmjs.com/package/@overture-stack/lectern-client">@overture-stack/lectern-client</a> alongside the other <a href="https://www.overture.bio/">Overture.bio</a> software packages.</p>
+				<p>The Lectern client codebase has also been moved. To contribute to the ongoing development of Lectern tools please go to <a href="https://github.com/overture-stack/lectern">github.com/@overture-stack/lectern</a>.</p>
+			</blockquote>
 			<a href="#js-lectern-client" id="js-lectern-client" style="color: inherit; text-decoration: none;">
 				<h1>JS Lectern Client</h1>
 			</a>
@@ -3060,7 +3104,7 @@ img {
 				<h2>Usage examples:</h2>
 			</a>
 			<ul>
-				<li>icgc-argo/argo-clinical [<a href="https://github.com/icgc-argo/argo-clinical%5D">https://github.com/icgc-argo/argo-clinical]</a></li>
+				<li><a href="https://github.com/icgc-argo/argo-clinical">icgc-argo/argo-clinical</a></li>
 			</ul>
 			<a href="#to-release-new-version" id="to-release-new-version" style="color: inherit; text-decoration: none;">
 				<h2>to release new version</h2>
@@ -3115,6 +3159,7 @@ img {
 							<li class="tsd-kind-interface"><a href="interfaces/logger.html" class="tsd-kind-icon">Logger</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/objectchange.html" class="tsd-kind-icon">Object<wbr>Change</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/schemadefinition.html" class="tsd-kind-icon">Schema<wbr>Definition</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/schemarestriction.html" class="tsd-kind-icon">Schema<wbr>Restriction</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/schemaservicerestclient.html" class="tsd-kind-icon">Schema<wbr>Service<wbr>Rest<wbr>Client</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/schemavalidationerror.html" class="tsd-kind-icon">Schema<wbr>Validation<wbr>Error</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/schemasdictionary.html" class="tsd-kind-icon">Schemas<wbr>Dictionary</a></li>
@@ -3136,6 +3181,7 @@ img {
 							<li class="tsd-kind-type-alias"><a href="globals.html#regexchanges" class="tsd-kind-icon">Regex<wbr>Changes</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#requiredchanges" class="tsd-kind-icon">Required<wbr>Changes</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#restrictionchanges" class="tsd-kind-icon">Restriction<wbr>Changes</a></li>
+							<li class="tsd-kind-type-alias"><a href="globals.html#schemadata" class="tsd-kind-icon">Schema<wbr>Data</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#schemaprocessingresult" class="tsd-kind-icon">Schema<wbr>Processing<wbr>Result</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#schematypes" class="tsd-kind-icon">Schema<wbr>Types</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#scriptchanges" class="tsd-kind-icon">Script<wbr>Changes</a></li>
@@ -3184,9 +3230,15 @@ img {
 							<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#delay" class="tsd-kind-icon">delay</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#dorequest" class="tsd-kind-icon">do<wbr>Request</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#fetchdiffandanalyze" class="tsd-kind-icon">fetch<wbr>Diff<wbr>And<wbr>Analyze</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#findduplicatekeys" class="tsd-kind-icon">find<wbr>Duplicate<wbr>Keys</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#findmissingforeignkeys" class="tsd-kind-icon">find<wbr>Missing<wbr>Foreign<wbr>Keys</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#getforeignkeyerrormsg" class="tsd-kind-icon">get<wbr>Foreign<wbr>Key<wbr>Error<wbr>Msg</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#getnotnullschemadefinitionfromdictionary" class="tsd-kind-icon">get<wbr>Not<wbr>Null<wbr>Schema<wbr>Definition<wbr>From<wbr>Dictionary</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#getregexerrormsg" class="tsd-kind-icon">get<wbr>Regex<wbr>Error<wbr>Msg</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#getschemafieldnameswithpriority" class="tsd-kind-icon">get<wbr>Schema<wbr>Field<wbr>Names<wbr>With<wbr>Priority</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#getsortedrecordkey" class="tsd-kind-icon">get<wbr>Sorted<wbr>Record<wbr>Key</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#gettypedvalue" class="tsd-kind-icon">get<wbr>Typed<wbr>Value</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#getuniquekeyerrormsg" class="tsd-kind-icon">get<wbr>Unique<wbr>Key<wbr>Error<wbr>Msg</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#isabsent" class="tsd-kind-icon">is<wbr>Absent</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#isemptystring" class="tsd-kind-icon">is<wbr>Empty<wbr>String</a></li>
@@ -3211,11 +3263,16 @@ img {
 							<li class="tsd-kind-function"><a href="globals.html#processproxy" class="tsd-kind-icon">process<wbr>Proxy</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#processrecord" class="tsd-kind-icon">process<wbr>Record</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#processrecords" class="tsd-kind-icon">process<wbr>Records</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#processschemas" class="tsd-kind-icon">process<wbr>Schemas</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#rangetosymbol" class="tsd-kind-icon">range<wbr>ToSymbol</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#renameproperties" class="tsd-kind-icon">rename<wbr>Properties</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#schemaerrormessage" class="tsd-kind-icon">schema<wbr>Error<wbr>Message</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#selectfieldsfromdataset" class="tsd-kind-icon">select<wbr>Fields<wbr>From<wbr>Dataset</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#sleep" class="tsd-kind-icon">sleep</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#validate" class="tsd-kind-icon">validate</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#validateaftertypeconversion" class="tsd-kind-icon">validate<wbr>After<wbr>Type<wbr>Conversion</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#validaterecordsset" class="tsd-kind-icon">validate<wbr>Records<wbr>Set</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -3237,7 +3294,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Batch<wbr>Processing<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DeepReadonly</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>processedRecords<span class="tsd-signature-symbol">: </span><a href="classes/typeddatarecord.html" class="tsd-signature-type">TypedDataRecord</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>validationErrors<span class="tsd-signature-symbol">: </span><a href="interfaces/schemavalidationerror.html" class="tsd-signature-type">SchemaValidationError</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L109">src/schema-entities.ts:109</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L124">src/schema-entities.ts:124</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3247,7 +3304,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Code<wbr>List<wbr>Restriction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L88">src/schema-entities.ts:88</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L103">src/schema-entities.ts:103</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3257,7 +3314,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Field<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/change.html" class="tsd-signature-type">Change</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L60">src/schema-entities.ts:60</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L63">src/schema-entities.ts:63</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3267,7 +3324,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Meta<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>core<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>changedFromCore<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>changedToCore<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L161">src/schema-entities.ts:161</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L179">src/schema-entities.ts:179</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3293,7 +3350,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Mutable<wbr>Record<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L332">src/schema-functions.ts:332</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L414">src/schema-functions.ts:414</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3311,7 +3368,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Processing<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>schema<span class="tsd-signature-symbol">: </span><a href="interfaces/schemadefinition.html" class="tsd-signature-type">SchemaDefinition</a>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/datarecord.html" class="tsd-signature-type">DataRecord</a><span class="tsd-signature-symbol">&gt;</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L326">src/schema-functions.ts:326</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L408">src/schema-functions.ts:408</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3348,7 +3405,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Range<wbr>Restriction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>exclusiveMax<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>exclusiveMin<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>max<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>min<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L90">src/schema-entities.ts:90</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L105">src/schema-entities.ts:105</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3375,7 +3432,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Raw<wbr>Mutable<wbr>Record<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L333">src/schema-functions.ts:333</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L415">src/schema-functions.ts:415</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3393,7 +3450,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Regex<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L168">src/schema-entities.ts:168</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L186">src/schema-entities.ts:186</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3408,7 +3465,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Required<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L172">src/schema-entities.ts:172</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L190">src/schema-entities.ts:190</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3423,7 +3480,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Restriction<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>codeList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>range<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>regex<span class="tsd-signature-symbol">: </span><a href="globals.html#regexchanges" class="tsd-signature-type">RegexChanges</a><span class="tsd-signature-symbol">; </span>required<span class="tsd-signature-symbol">: </span><a href="globals.html#requiredchanges" class="tsd-signature-type">RequiredChanges</a><span class="tsd-signature-symbol">; </span>script<span class="tsd-signature-symbol">: </span><a href="globals.html#scriptchanges" class="tsd-signature-type">ScriptChanges</a><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L149">src/schema-entities.ts:149</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L167">src/schema-entities.ts:167</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3452,12 +3509,22 @@ img {
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-type-alias">
+				<a name="schemadata" class="tsd-anchor"></a>
+				<h3>Schema<wbr>Data</h3>
+				<div class="tsd-signature tsd-kind-icon">Schema<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/datarecord.html" class="tsd-signature-type">DataRecord</a><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L57">src/schema-entities.ts:57</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias">
 				<a name="schemaprocessingresult" class="tsd-anchor"></a>
 				<h3>Schema<wbr>Processing<wbr>Result</h3>
 				<div class="tsd-signature tsd-kind-icon">Schema<wbr>Processing<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DeepReadonly</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>processedRecord<span class="tsd-signature-symbol">: </span><a href="classes/typeddatarecord.html" class="tsd-signature-type">TypedDataRecord</a><span class="tsd-signature-symbol">; </span>validationErrors<span class="tsd-signature-symbol">: </span><a href="interfaces/schemavalidationerror.html" class="tsd-signature-type">SchemaValidationError</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L104">src/schema-entities.ts:104</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L119">src/schema-entities.ts:119</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3467,7 +3534,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Schema<wbr>Types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L32">src/schema-entities.ts:32</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L32">src/schema-entities.ts:32</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3477,7 +3544,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Script<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L176">src/schema-entities.ts:176</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L194">src/schema-entities.ts:194</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3495,7 +3562,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">F<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">deepFreeze</span><span class="tsd-signature-symbol"> = deepFreeze</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L153">src/utils.ts:153</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L153">src/utils.ts:153</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3505,7 +3572,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">INVALID_<wbr>VALUE_<wbr>ERROR_<wbr>MESSAGE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"The value is not permissible for this field."</span><span class="tsd-signature-symbol"> = &quot;The value is not permissible for this field.&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L20">src/schema-error-messages.ts:20</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L53">src/schema-error-messages.ts:53</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3515,10 +3582,10 @@ img {
 				<div class="tsd-signature tsd-kind-icon">L<span class="tsd-signature-symbol">:</span> <a href="interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> = loggerFor(__filename)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-entities.ts#L22">src/schema-entities.ts:22</a></li>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L29">src/schema-rest-client.ts:29</a></li>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L57">src/schema-functions.ts:57</a></li>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/parallel.ts#L24">src/parallel.ts:24</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-entities.ts#L22">src/schema-entities.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L29">src/schema-rest-client.ts:29</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L59">src/schema-functions.ts:59</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/parallel.ts#L24">src/parallel.ts:24</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3528,7 +3595,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">LOG_<wbr>LEVEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = process.env.LOG_LEVEL || &#x27;info&#x27;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L25">src/logger.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L25">src/logger.ts:25</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3538,7 +3605,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">align<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">align</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L22">src/logger.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3548,7 +3615,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">available<wbr>Cpus<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number(process.env.ALLOWED_CPUS) || cpuCount</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/parallel.ts#L29">src/parallel.ts:29</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/parallel.ts#L29">src/parallel.ts:29</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3558,7 +3625,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">combine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">combine</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L22">src/logger.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3568,7 +3635,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">cpu<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = os.cpus().length</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/parallel.ts#L27">src/parallel.ts:27</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/parallel.ts#L27">src/parallel.ts:27</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3578,7 +3645,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">create<wbr>Logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">LoggerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Logger</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L21">src/logger.ts:21</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L21">src/logger.ts:21</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3609,7 +3676,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">format</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L21">src/logger.ts:21</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L21">src/logger.ts:21</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3619,7 +3686,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">fs<wbr>Promises<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">promises</span><span class="tsd-signature-symbol"> = fs.promises</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L25">src/utils.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L25">src/utils.ts:25</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3629,7 +3696,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">json</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L22">src/logger.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3639,7 +3706,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">label</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L22">src/logger.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3649,7 +3716,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">parent<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MessagePort</span><span class="tsd-signature-symbol"> = workerThreads.parentPort</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-worker.js#L21">src/schema-worker.js:21</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-worker.js#L21">src/schema-worker.js:21</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3659,7 +3726,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">pool<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StaticPool</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new StaticPool({size: availableCpus,task: __dirname + &#x27;/schema-worker.js&#x27;,})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/parallel.ts#L32">src/parallel.ts:32</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/parallel.ts#L32">src/parallel.ts:32</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3669,17 +3736,17 @@ img {
 				<div class="tsd-signature tsd-kind-icon">pretty<wbr>Print<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">prettyPrint</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L22">src/logger.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="service" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> service</h3>
-				<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/home/ballabadi/dev/repos/overture/js-lectern-client/src/schema-functions&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;./schema-functions&#x27;)</span></div>
+				<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/Users/rico/chu/js-lectern-client/src/schema-functions&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;./schema-functions&#x27;)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-worker.js#L42">src/schema-worker.js:42</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-worker.js#L42">src/schema-worker.js:42</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3689,7 +3756,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">simple<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">simple</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L22">src/logger.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3699,7 +3766,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">timestamp</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L22">src/logger.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L22">src/logger.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3709,17 +3776,17 @@ img {
 				<div class="tsd-signature tsd-kind-icon">transports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Transports</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L21">src/logger.ts:21</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L21">src/logger.ts:21</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="tsnode" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> ts<wbr>Node</h3>
-				<div class="tsd-signature tsd-kind-icon">ts<wbr>Node<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/home/ballabadi/dev/repos/overture/js-lectern-client/node_modules/ts-node/dist/index&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;ts-node&#x27;)</span></div>
+				<div class="tsd-signature tsd-kind-icon">ts<wbr>Node<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/Users/rico/chu/js-lectern-client/node_modules/ts-node/dist/index&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;ts-node&#x27;)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-worker.js#L24">src/schema-worker.js:24</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-worker.js#L24">src/schema-worker.js:24</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3729,7 +3796,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">winston<wbr>Logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Logger</span><span class="tsd-signature-symbol"> = winston.createLogger(logConfiguration)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L42">src/logger.ts:42</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L42">src/logger.ts:42</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3739,7 +3806,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">worker<wbr>Threads<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;worker_threads&quot;</span><span class="tsd-signature-symbol"> = require(&#x27;worker_threads&#x27;)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-worker.js#L20">src/schema-worker.js:20</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-worker.js#L20">src/schema-worker.js:20</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3756,7 +3823,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L54">src/change-analyzer.ts:54</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L54">src/change-analyzer.ts:54</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3779,7 +3846,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L130">src/change-analyzer.ts:130</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L130">src/change-analyzer.ts:130</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3808,7 +3875,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L238">src/change-analyzer.ts:238</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L238">src/change-analyzer.ts:238</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3837,7 +3904,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L250">src/change-analyzer.ts:250</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L250">src/change-analyzer.ts:250</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3866,7 +3933,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L149">src/change-analyzer.ts:149</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L149">src/change-analyzer.ts:149</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3898,7 +3965,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L141">src/change-analyzer.ts:141</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L141">src/change-analyzer.ts:141</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3927,7 +3994,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L209">src/schema-functions.ts:209</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L272">src/schema-functions.ts:272</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3959,7 +4026,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L70">src/utils.ts:70</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L70">src/utils.ts:70</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3988,7 +4055,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L147">src/utils.ts:147</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L147">src/utils.ts:147</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4011,7 +4078,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L169">src/schema-rest-client.ts:169</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L169">src/schema-rest-client.ts:169</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4040,7 +4107,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L96">src/schema-rest-client.ts:96</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L96">src/schema-rest-client.ts:96</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4063,7 +4130,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L44">src/change-analyzer.ts:44</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L44">src/change-analyzer.ts:44</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4086,6 +4153,139 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="findduplicatekeys" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> find<wbr>Duplicate<wbr>Keys</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">find<wbr>Duplicate<wbr>Keys<span class="tsd-signature-symbol">(</span>datasetKeys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/records-operations.ts#L75">src/records-operations.ts:75</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Find duplicate keys in a dataset.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>datasetKeys: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Array with the keys to evaluate.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></h4>
+						<p>An Array with all the values that appear more than once in the dataset.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="findmissingforeignkeys" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> find<wbr>Missing<wbr>Foreign<wbr>Keys</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">find<wbr>Missing<wbr>Foreign<wbr>Keys<span class="tsd-signature-symbol">(</span>datasetKeysA<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span>, datasetKeysB<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span>, fieldsMapping<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/records-operations.ts#L61">src/records-operations.ts:61</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Find missing foreign keys by calculating the difference between 2 dataset keys (similar to a set difference).
+								Returns rows in <code>dataKeysA</code> which are not present in <code>dataKeysB</code>.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>datasetKeysA: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Keys of the dataset A. The returned value of this function is a subset of this array.</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h5>datasetKeysB: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Keys of the dataset B. Elements to be substracted from <code>datasetKeysA</code>.</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h5>fieldsMapping: <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Mapping of the field names so the keys can be compared correctly.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="getforeignkeyerrormsg" class="tsd-anchor"></a>
+				<h3>get<wbr>Foreign<wbr>Key<wbr>Error<wbr>Msg</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Foreign<wbr>Key<wbr>Error<wbr>Msg<span class="tsd-signature-symbol">(</span>errorData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L23">src/schema-error-messages.ts:23</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>errorData: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="getnotnullschemadefinitionfromdictionary" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Not<wbr>Null<wbr>Schema<wbr>Definition<wbr>From<wbr>Dictionary</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Not<wbr>Null<wbr>Schema<wbr>Definition<wbr>From<wbr>Dictionary<span class="tsd-signature-symbol">(</span>dictionary<span class="tsd-signature-symbol">: </span><a href="interfaces/schemasdictionary.html" class="tsd-signature-type">SchemasDictionary</a>, schemaName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/schemadefinition.html" class="tsd-signature-type">SchemaDefinition</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L82">src/schema-functions.ts:82</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>dictionary: <a href="interfaces/schemasdictionary.html" class="tsd-signature-type">SchemasDictionary</a></h5>
+							</li>
+							<li>
+								<h5>schemaName: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="interfaces/schemadefinition.html" class="tsd-signature-type">SchemaDefinition</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="getregexerrormsg" class="tsd-anchor"></a>
 				<h3>get<wbr>Regex<wbr>Error<wbr>Msg</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -4095,7 +4295,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L38">src/schema-error-messages.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L99">src/schema-error-messages.ts:99</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4118,7 +4318,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L59">src/schema-functions.ts:59</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L61">src/schema-functions.ts:61</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4135,6 +4335,42 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="getsortedrecordkey" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Sorted<wbr>Record<wbr>Key</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Sorted<wbr>Record<wbr>Key<span class="tsd-signature-symbol">(</span>record<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/records-operations.ts#L45">src/records-operations.ts:45</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Returns a string representation of a record. The record is sorted by its properties so
+									2 records which have the same properties and values (even if in different order) will produce the
+								same string with this function.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>record: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Record to be processed.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>String representation of the record sorted by its properties.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="gettypedvalue" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Typed<wbr>Value</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -4144,7 +4380,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L257">src/schema-functions.ts:257</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L320">src/schema-functions.ts:320</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4164,6 +4400,29 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="getuniquekeyerrormsg" class="tsd-anchor"></a>
+				<h3>get<wbr>Unique<wbr>Key<wbr>Error<wbr>Msg</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Unique<wbr>Key<wbr>Error<wbr>Msg<span class="tsd-signature-symbol">(</span>errorData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L38">src/schema-error-messages.ts:38</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>errorData: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="isabsent" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Absent</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -4173,7 +4432,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L107">src/utils.ts:107</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L107">src/utils.ts:107</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4196,7 +4455,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L66">src/utils.ts:66</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L66">src/utils.ts:66</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4225,7 +4484,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L103">src/utils.ts:103</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L103">src/utils.ts:103</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4248,7 +4507,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L32">src/change-analyzer.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L32">src/change-analyzer.ts:32</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4271,7 +4530,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L36">src/change-analyzer.ts:36</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L36">src/change-analyzer.ts:36</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4294,7 +4553,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L111">src/utils.ts:111</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L111">src/utils.ts:111</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4317,7 +4576,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L99">src/utils.ts:99</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L99">src/utils.ts:99</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4340,7 +4599,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L86">src/utils.ts:86</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L86">src/utils.ts:86</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4363,7 +4622,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L90">src/utils.ts:90</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L90">src/utils.ts:90</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4386,7 +4645,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/change-analyzer.ts#L40">src/change-analyzer.ts:40</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/change-analyzer.ts#L40">src/change-analyzer.ts:40</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4409,7 +4668,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L78">src/utils.ts:78</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L78">src/utils.ts:78</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4432,7 +4691,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L82">src/utils.ts:82</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L82">src/utils.ts:82</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4455,7 +4714,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L95">src/utils.ts:95</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L95">src/utils.ts:95</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4481,7 +4740,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L135">src/utils.ts:135</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L135">src/utils.ts:135</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4507,7 +4766,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L143">src/utils.ts:143</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L143">src/utils.ts:143</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4533,7 +4792,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L138">src/schema-rest-client.ts:138</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L138">src/schema-rest-client.ts:138</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4565,7 +4824,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L112">src/schema-rest-client.ts:112</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L112">src/schema-rest-client.ts:112</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4594,7 +4853,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L46">src/logger.ts:46</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L46">src/logger.ts:46</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4617,7 +4876,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L57">src/utils.ts:57</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L57">src/utils.ts:57</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4646,7 +4905,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L171">src/schema-functions.ts:171</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L234">src/schema-functions.ts:234</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4681,7 +4940,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L115">src/schema-functions.ts:115</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L178">src/schema-functions.ts:178</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4713,7 +4972,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-worker.js#L44">src/schema-worker.js:44</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-worker.js#L44">src/schema-worker.js:44</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4738,7 +4997,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/parallel.ts#L37">src/parallel.ts:37</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/parallel.ts#L37">src/parallel.ts:37</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4770,7 +5029,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L80">src/schema-functions.ts:80</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L146">src/schema-functions.ts:146</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4790,6 +5049,97 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="processschemas" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> process<wbr>Schemas</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">process<wbr>Schemas<span class="tsd-signature-symbol">(</span>dictionary<span class="tsd-signature-symbol">: </span><a href="interfaces/schemasdictionary.html" class="tsd-signature-type">SchemasDictionary</a>, schemasData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="globals.html#schemadata" class="tsd-signature-type">SchemaData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="globals.html#batchprocessingresult" class="tsd-signature-type">BatchProcessingResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L94">src/schema-functions.ts:94</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>dictionary: <a href="interfaces/schemasdictionary.html" class="tsd-signature-type">SchemasDictionary</a></h5>
+							</li>
+							<li>
+								<h5>schemasData: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="globals.html#schemadata" class="tsd-signature-type">SchemaData</a><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="globals.html#batchprocessingresult" class="tsd-signature-type">BatchProcessingResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="rangetosymbol" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> range<wbr>ToSymbol</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">range<wbr>ToSymbol<span class="tsd-signature-symbol">(</span>range<span class="tsd-signature-symbol">: </span><a href="globals.html#rangerestriction" class="tsd-signature-type">RangeRestriction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L74">src/schema-error-messages.ts:74</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>range: <a href="globals.html#rangerestriction" class="tsd-signature-type">RangeRestriction</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="renameproperties" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> rename<wbr>Properties</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">rename<wbr>Properties<span class="tsd-signature-symbol">(</span>record<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span>, fieldsMapping<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/records-operations.ts#L28">src/records-operations.ts:28</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Renames properties in a record using a mapping between current and new names.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>record: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The record whose properties should be renamed.</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h5>fieldsMapping: <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>A mapping of current property names to new property names.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>A new record with the properties&#39; names changed according to the mapping.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="schemaerrormessage" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> schema<wbr>Error<wbr>Message</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -4799,7 +5149,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L32">src/schema-error-messages.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L68">src/schema-error-messages.ts:68</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4816,6 +5166,49 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="selectfieldsfromdataset" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> select<wbr>Fields<wbr>From<wbr>Dataset</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">select<wbr>Fields<wbr>From<wbr>Dataset<span class="tsd-signature-symbol">(</span>dataset<span class="tsd-signature-symbol">: </span><a href="globals.html#schemadata" class="tsd-signature-type">SchemaData</a>, fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L359">src/schema-functions.ts:359</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>A &quot;select&quot; function that retrieves specific fields from the dataset as a record, as well as the numeric position of each row in the dataset.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>dataset: <a href="globals.html#schemadata" class="tsd-signature-type">SchemaData</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Dataset to select fields from.</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h5>fields: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Array with names of the fields to select.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></h4>
+						<p>A tuple array. In each tuple, the first element is the index of the row in the dataset, and the second value is the record with the
+						selected values.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="sleep" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> sleep</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -4825,7 +5218,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L117">src/utils.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L117">src/utils.ts:117</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4848,7 +5241,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/utils.ts#L121">src/utils.ts:121</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/utils.ts#L121">src/utils.ts:121</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4871,7 +5264,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L294">src/schema-functions.ts:294</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L376">src/schema-functions.ts:376</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4910,7 +5303,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-functions.ts#L310">src/schema-functions.ts:310</a></li>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L392">src/schema-functions.ts:392</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4929,6 +5322,32 @@ img {
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="validaterecordsset" class="tsd-anchor"></a>
+				<h3>validate<wbr>Records<wbr>Set</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">validate<wbr>Records<wbr>Set<span class="tsd-signature-symbol">(</span>schemaDef<span class="tsd-signature-symbol">: </span><a href="interfaces/schemadefinition.html" class="tsd-signature-type">SchemaDefinition</a>, processedRecords<span class="tsd-signature-symbol">: </span><a href="classes/typeddatarecord.html" class="tsd-signature-type">TypedDataRecord</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/schemavalidationerror.html" class="tsd-signature-type">SchemaValidationError</a><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-functions.ts#L871">src/schema-functions.ts:871</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>schemaDef: <a href="interfaces/schemadefinition.html" class="tsd-signature-type">SchemaDefinition</a></h5>
+							</li>
+							<li>
+								<h5>processedRecords: <a href="classes/typeddatarecord.html" class="tsd-signature-type">TypedDataRecord</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="interfaces/schemavalidationerror.html" class="tsd-signature-type">SchemaValidationError</a><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Object literals</h2>
@@ -4938,22 +5357,51 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ERROR_<wbr>MESSAGES<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L21">src/schema-error-messages.ts:21</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L54">src/schema-error-messages.ts:54</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
-					<a name="error_messages.invalid_by_range" class="tsd-anchor"></a>
-					<h3>INVALID_<wbr>BY_<wbr>RANGE</h3>
+					<a name="error_messages.invalid_by_foreign_key" class="tsd-anchor"></a>
+					<h3>INVALID_<wbr>BY_<wbr>FOREIGN_<wbr>KEY</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
-						<li class="tsd-signature tsd-kind-icon">INVALID_<wbr>BY_<wbr>RANGE<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">INVALID_<wbr>BY_<wbr>FOREIGN_<wbr>KEY<span class="tsd-signature-symbol">(</span>errorData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L24">src/schema-error-messages.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L62">src/schema-error-messages.ts:62</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>errorData: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+					<a name="error_messages.invalid_by_range" class="tsd-anchor"></a>
+					<h3>INVALID_<wbr>BY_<wbr>RANGE</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+						<li class="tsd-signature tsd-kind-icon">INVALID_<wbr>BY_<wbr>RANGE<span class="tsd-signature-symbol">(</span>errorData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L57">src/schema-error-messages.ts:57</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>errorData: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
@@ -4968,7 +5416,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L23">src/schema-error-messages.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L56">src/schema-error-messages.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4991,7 +5439,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L25">src/schema-error-messages.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L58">src/schema-error-messages.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -5005,6 +5453,52 @@ img {
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+					<a name="error_messages.invalid_by_unique" class="tsd-anchor"></a>
+					<h3>INVALID_<wbr>BY_<wbr>UNIQUE</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+						<li class="tsd-signature tsd-kind-icon">INVALID_<wbr>BY_<wbr>UNIQUE<span class="tsd-signature-symbol">(</span>errorData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L61">src/schema-error-messages.ts:61</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>errorData: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+					<a name="error_messages.invalid_by_unique_key" class="tsd-anchor"></a>
+					<h3>INVALID_<wbr>BY_<wbr>UNIQUE_<wbr>KEY</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+						<li class="tsd-signature tsd-kind-icon">INVALID_<wbr>BY_<wbr>UNIQUE_<wbr>KEY<span class="tsd-signature-symbol">(</span>errorData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L63">src/schema-error-messages.ts:63</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>errorData: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 					<a name="error_messages.invalid_enum_value" class="tsd-anchor"></a>
 					<h3>INVALID_<wbr>ENUM_<wbr>VALUE</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
@@ -5014,7 +5508,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L26">src/schema-error-messages.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L59">src/schema-error-messages.ts:59</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -5031,7 +5525,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L22">src/schema-error-messages.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L55">src/schema-error-messages.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -5048,7 +5542,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-error-messages.ts#L27">src/schema-error-messages.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-error-messages.ts#L60">src/schema-error-messages.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -5068,7 +5562,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">log<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L29">src/logger.ts:29</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L29">src/logger.ts:29</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -5077,7 +5571,7 @@ img {
 					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Format</span><span class="tsd-signature-symbol"> = combine(json(), simple(), timestamp())</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L31">src/logger.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L31">src/logger.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5087,7 +5581,7 @@ img {
 					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = LOG_LEVEL</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L30">src/logger.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L30">src/logger.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5097,7 +5591,7 @@ img {
 					<div class="tsd-signature tsd-kind-icon">transports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ConsoleTransportInstance</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [new winston.transports.Console()]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/logger.ts#L32">src/logger.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/logger.ts#L32">src/logger.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5108,7 +5602,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">rest<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L41">src/schema-rest-client.ts:41</a></li>
+						<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L41">src/schema-rest-client.ts:41</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -5121,7 +5615,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L66">src/schema-rest-client.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L66">src/schema-rest-client.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -5153,7 +5647,7 @@ img {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/overture-stack/js-lectern-client/blob/b2b14fa/src/schema-rest-client.ts#L42">src/schema-rest-client.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/Ferlab-Ste-Justine/js-lectern-client/blob/bd4aced/src/schema-rest-client.ts#L42">src/schema-rest-client.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
