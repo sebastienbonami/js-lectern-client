@@ -10,6 +10,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-tags: true
       - run: |
           current_version=next@$(node -p -e "require('./package.json').version")
           echo "List of tags:"
