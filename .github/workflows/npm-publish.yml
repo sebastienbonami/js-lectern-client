@@ -6,6 +6,8 @@ on:
 jobs:
   create-tag:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -36,6 +38,6 @@ jobs:
           # exit if tag already exists
           [[ $(git tag -l "$current_version") ]] && exit 0
           echo "Publishing stable release $current_version"
-          npm publish
+          npm publish --dry-run
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
