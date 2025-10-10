@@ -9,11 +9,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-tags: true
+      - uses: actions/checkout@v3
       - run: |
           current_version=next@$(node -p -e "require('./package.json').version")
+          git fetch --tags
           echo "List of tags:"
           git tag -l
           if [[ $(git tag -l "$current_version") ]]; then
