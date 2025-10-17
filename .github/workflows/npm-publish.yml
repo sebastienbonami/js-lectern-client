@@ -16,7 +16,7 @@ jobs:
           git fetch --tags
           if [[ $(git tag -l "$current_version") ]]; then
             echo "Exit if tag already exists"
-            exit 78
+            exit 0
           fi
           echo "creating tag $current_version"
           git tag $current_version
